@@ -2,7 +2,8 @@ const API_KEY = 'd9d23c4b33da4fb5bd3121603261702';
 let position = "";
 
 const getData = async (location) => {
-    const url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${location}`;
+    console.log(location)
+    const url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${location.coords.latitude},${location.coords.longitude}`;
     try {
         const response = await fetch(url)
         if (!response.ok) {

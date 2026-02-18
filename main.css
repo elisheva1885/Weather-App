@@ -1,3 +1,47 @@
-body{
-    background-color: lightblue;
+body {
+    background-color: rgb(118, 195, 220);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 8%;
+    width: 85%;
+    /* margin-left: 7.5%; */
+    
+
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between
+}
+
+.box {
+    border-color: rgb(99, 99, 99);
+    border-style: solid;
+    border-width: 1%;
+    width: 80%;
+}
+
+#leftfooter{
+display: flex;
+}
+
+#rightfooter{
+    display: flex;
+}
+
+#rightfooter,  #leftfooter> img {
+    width:  50%;
+    height: 50%;
 }

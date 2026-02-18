@@ -3,7 +3,9 @@ let position = "";
 
 const getData = async (location) => {
     console.log(location)
-    const url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${location.coords.latitude},${location.coords.longitude}`;
+    // const url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${location.coords.latitude},${location.coords.longitude}`;
+        const url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=Tel+Aviv`;
+
     try {
         const response = await fetch(url)
         if (!response.ok) {
@@ -11,7 +13,7 @@ const getData = async (location) => {
         }
         const result = await response.json();
         console.log(result);
-
+        showData(result);
     }
     catch (err) {
         console.error(err.message)
@@ -24,5 +26,21 @@ if (navigator.geolocation) {
     
 } else {
     alert("no acess for the location")
+}
+
+const showData = (data)=> {
+   let degrees =  data.current.temp_c;
+   let condition = data.current.condition.text;
+   let conditionImg = data.current.condition.icon;
+   let region = data.location.region;
+   let country = data.location.country;
+   let feelslike = data.current.feelslike_c;
+   let humidity = data.current.humidity;
+   let contentbox = document.getElementsByClassName("content")[0];
+   contentbox.innerHTML = (`<img src="${conditionImg}"/> <br/>${degrees} C<br/> ${condition}<br/> ${country},  ${region}`)
+   let leftfooter = document.getElementsByClassName("leftfooter")[0];
+   leftfooter.innerHTML += (`${feelslike} C <br/>`)
+      let rightfooter = document.getElementsByClassName("rightfooter")[0];
+   rightfooter.innerHTML += (`${humidity} % <br/>`)
 }
 

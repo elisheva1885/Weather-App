@@ -2,8 +2,6 @@ const API_KEY = 'd9d23c4b33da4fb5bd3121603261702';
 let interval = 30000;
 
 const getData = async (location) => {
-    console.log("now on getData!!!");
-    console.log(location)
     const url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${location.coords.latitude},${location.coords.longitude}`;
     try {
         const response = await fetch(url)
@@ -11,7 +9,6 @@ const getData = async (location) => {
             throw new Error(`Response status: ${response.status}`)
         }
         const result = await response.json();
-        console.log(result);
         showData(result);
     }
     catch (err) {

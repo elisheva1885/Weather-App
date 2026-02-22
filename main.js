@@ -34,11 +34,13 @@ getLocation()
 setInterval(getLocation, interval)
 
 const showData = (data) => {
+    let degrees = Math.round(data.current.temp_c) 
+    let feelslike = Math.round(data.current.feelslike_c)
     document.getElementById("condImg").src = data.current.condition.icon;
-    document.getElementById("degrees").textContent = data.current.temp_c + ' C';
+    document.getElementById("degrees").textContent = degrees ;
     document.getElementById("condition").textContent = data.current.condition.text;
     document.getElementById("area").textContent = data.location.region + ', ' + data.location.country;
-    document.getElementById("feels-like").textContent = data.current.feelslike_c + ' C'
+    document.getElementById("feels-like").textContent = feelslike;
     document.getElementById("humidity").textContent = data.current.humidity + ' %'
 }
 

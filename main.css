@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(53, 138, 169);
+    background-color: #43AEFC;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -14,16 +14,14 @@ body {
     align-items: center;
     background-color: white;
     border-radius: 3%;
-    width: 85%;
-    /* margin: 5%; */
+    width: 60%;
 }
-
-
 
 .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
 }
 
 .box {
@@ -41,7 +39,7 @@ body {
 
 .content {
     flex-grow: 6;
-    border-color: rgb(10, 10, 10);
+    border-color: rgb(141, 141, 141);
     border-style: solid;
     border-width: 0.5px 0 0.5px 0;
 
@@ -54,10 +52,12 @@ body {
 
 #rightfooter {
     display: flex;
-    border-color: rgb(10, 10, 10);
+    border-color:  rgb(141, 141, 141);
     border-style: solid;
     border-width: 0 0 0 0.5px;
     align-items: center;
+    height: 100%;
+
 }
 
 i {
@@ -65,19 +65,15 @@ i {
 }
 
 #condImg {
-    width: 70%;
-    height: 70%;
+    max-width: 200%;
+    height: auto;
     order: -1;
-}
-
-span {
-    font-size: 150%;
-    /* font-weight: bold; */
 }
 
 #degrees {
     font-size: 400%;
     font-weight: bold;
+  
 }
 
 #condition {
@@ -89,10 +85,19 @@ span {
 }
 
 h1 {
-    color: rgb(11, 247, 255);
+    color: #5EBAFD;
 }
 
 .fa-arrow-left , .fa-droplet,.fa-temperature-empty{
-    color: rgb(11, 247, 255);
+    color: #5EBAFD;
     font-size:xx-large;
 }
+
+
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+

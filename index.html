@@ -19,50 +19,57 @@
     <div class="container">
         <div class="header box">
             <i class="fa-solid fa-arrow-left"></i>
-            <h1 class="poppins-regular" id="title">Weather App</h1>
+            <h1 id="title">Weather App</h1>
         </div>
         <div class="content box">
-            <img id="condImg" src="" />
-            <p>
-                <span id="degrees" class="poppins-regular">
+            <img id="condImg" src="" >
+            <div id="degrees-box">
+                <span id="degrees"  >
                 </span>
-                <span id="degrees" class="poppins-regular">
-                    °C
+                <span id="degrees-icon"  >
+                    °
                 </span>
-            </p>
-            <span id="condition" class="poppins-regular">
+                  <span id="degrees"  >
+                    C
+                </span>
+            </div >
+            <span id="condition"  >
             </span>
             <p>
                 <i class="fa-solid fa-location-dot"></i>
-                <span id="area" class="poppins-regular">
+                <span id="area"  >
                 </span>
             </p>
         </div>
         <div class="footer box">
-            <div class="box" id="leftfooter">
-                <p id="feels-like-info">
-                    <span>
-                        <span id="feels-like" class="poppins-regular">
-                        </span>
-                        <span id="degrees-like" class="poppins-regular">
-                            °C
-                        </span>
-                    </span>
-                    <span class="poppins-regular">
+            <div class="box" id="footer-box">
+                <div id="feels-like-info">
+                    <div id="feels-like-display">
+                         <span id="feels-like"  >
+                </span>
+                <span id="degrees-icon-feels-like"  >
+                    °
+                </span>
+                  <span id="feels-like"  >
+                    C
+                </span>
+                 </div>
+                    <span class="info-text" >
                         Feels like
                     </span>
-                </p>
+                </div>
                 <i class="fa-solid fa-temperature-empty"></i>
             </div>
-            <div class="box" id="rightfooter">
-                <p id="humidity-info">
-                    <span id="humidity" class="poppins-regular"> </span>
-                    <span class="poppins-regular">
+            <div class="box" id="footer-box">
+                <div id="humidity-info">
+                    <span id="humidity"  > </span>
+                    <span  class="info-text">
                         Humidity
                     </span>
-                </p>
+                </div>
                 <i class="fa-solid fa-droplet"></i>
             </div>
+        </div>
         </div>
         <script src="main.js"></script>
 </body>

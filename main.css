@@ -71,12 +71,13 @@ body {
 
 #degrees {
     font-size: 300%;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 #degrees-icon {
     font-size: 150%;
     font-weight: 500;
+    margin-top: 6%;
 }
 
 #degrees-icon-feels-like {
@@ -102,6 +103,7 @@ body {
     order: -1;
     margin: 0%;
     padding: 0%;
+
 }
 
 #title {

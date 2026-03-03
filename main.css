@@ -1,10 +1,12 @@
 body {
-    background-color: rgb(53, 138, 169);
+    background-color: #43AEFC;
     text-align: center;
     display: flex;
     justify-content: center;
-    align-items: center;
-
+    font-family: "Poppins", sans-serif;
+    font-weight: 350;
+    font-style: normal;
+    font-size: 65%
 }
 
 .container {
@@ -13,86 +15,140 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: white;
-    border-radius: 3%;
-    width: 85%;
-    /* margin: 5%; */
+    border-radius: 1%;
+    width: 200px;
+    margin-top: 4%;
 }
-
-
 
 .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
 }
 
 .box {
     width: 100%;
-    flex-grow: 1;
-    justify-content: center;
 }
 
-.header{
+.header {
     display: flex;
     align-items: center;
-    justify-content:flex-start;
-    margin-left: 10%;
+    justify-content: flex-start;
+    margin: 2%;
+    margin-left: 15%;
 }
 
 .content {
-    flex-grow: 6;
-    border-color: rgb(10, 10, 10);
+    border-color: rgb(141, 141, 141);
     border-style: solid;
     border-width: 0.5px 0 0.5px 0;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 3% 0% 0% 0%;
+    margin-bottom: 0%;
 }
 
-#leftfooter {
+#footer-box {
     display: flex;
     align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
-#rightfooter {
-    display: flex;
-    border-color: rgb(10, 10, 10);
+.footer> :first-child {
+    border-color: rgb(141, 141, 141);
     border-style: solid;
-    border-width: 0 0 0 0.5px;
-    align-items: center;
+    border-width: 0 0.3px 0 0;
 }
 
-i {
-    order: -1;
-}
-
-#condImg {
-    width: 70%;
-    height: 70%;
-    order: -1;
-}
-
-span {
-    font-size: 150%;
-    /* font-weight: bold; */
+#degrees-box {
+    display: flex;
 }
 
 #degrees {
-    font-size: 400%;
-    font-weight: bold;
+    font-size: 300%;
+    font-weight: 600;
+}
+
+#degrees-icon {
+    font-size: 150%;
+    font-weight: 500;
+    margin-top: 6%;
+}
+
+#degrees-icon-feels-like {
+    font-size: 70%;
+    font-weight: 500;
 }
 
 #condition {
-    font-size: 180%;
+    font-size: 90%;
+    margin-bottom: 1%;
 }
 
 #area {
-    font-size: 130%;
+    font-size: 90%;
+    margin-bottom: 15%;
 }
 
-h1 {
-    color: rgb(11, 247, 255);
+.fa-arrow-left,
+.fa-droplet,
+.fa-temperature-empty {
+    color: #5EBAFD;
+    font-size: medium;
+    order: -1;
+    margin: 0%;
+    padding: 0%;
 }
 
-.fa-arrow-left , .fa-droplet,.fa-temperature-empty{
-    color: rgb(11, 247, 255);
-    font-size:xx-large;
+.fa-arrow-left{
+    font-size: 90%;
+}
+
+#title {
+    color: #5EBAFD;
+    font-size: 100%;
+    font-weight: 400;
+    margin: 0%;
+    margin-left: 2%;
+}
+
+#area_info {
+    padding: 0%;
+    margin: 2%;
+}
+
+
+#humidity-info,
+#feels-like-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3% 0%;
+}
+
+#humidity {
+    font-size: 100%;
+    font-weight: 480;
+    padding: 0%;
+    margin-bottom: -10%;
+}
+
+#feels-like-display {
+    display: flex;
+    justify-content: center;
+    font-size: 90%;
+    font-weight: 400;
+    margin-bottom: -10%;
+
+}
+
+.info-text {
+    font-size: 65%;
+    font-weight: 300;
 }

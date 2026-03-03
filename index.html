@@ -6,47 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/db69dc4f40.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
     <div class="container">
         <div class="header box">
             <i class="fa-solid fa-arrow-left"></i>
-            <h1>Weather App</h1>
-
+            <h1 id="title">Weather App</h1>
         </div>
         <div class="content box">
-            <p>
-                <img id="condImg" src="" />
-                <br />
-                <span id="degrees">
-                </span><br />
-                <span id="condition">
+            <img id="condImg" src="" >
+            <div id="degrees-box">
+                <span id="degrees"  >
                 </span>
-                <br />
+                <span id="degrees-icon"  >
+                    °
+                </span>
+                  <span id="degrees"  >
+                    C
+                </span>
+            </div >
+            <span id="condition"  >
+            </span>
+            <div id="area_info">
                 <i class="fa-solid fa-location-dot"></i>
-                <span id="area">
+                <span id="area"  >
                 </span>
-
-            </p>
+            </div>
         </div>
         <div class="footer box">
-            <div class="box" id="leftfooter">
-                <p>
-                    <span id="feels-like">
+            <div class="box" id="footer-box">
+                <div id="feels-like-info">
+                    <div id="feels-like-display">
+                         <span id="feels-like"  >
+                </span>
+                <span id="degrees-icon-feels-like"  >
+                    °
+                </span>
+                  <span id="feels-like"  >
+                    C
+                </span>
+                 </div>
+                    <span class="info-text" >
+                        Feels like
                     </span>
-                    <br />
-                    feels like
-                </p>
+                </div>
                 <i class="fa-solid fa-temperature-empty"></i>
             </div>
-            <div class="box" id="rightfooter">
-                <p><span id="humidity"> </span><br /> Humidity </p><i class="fa-solid fa-droplet"></i>
+            <div class="box" id="footer-box">
+                <div id="humidity-info">
+                    <span id="humidity"  > </span>
+                    <span  class="info-text">
+                        Humidity
+                    </span>
+                </div>
+                <i class="fa-solid fa-droplet"></i>
             </div>
         </div>
-
-
+        </div>
         <script src="main.js"></script>
 </body>
 

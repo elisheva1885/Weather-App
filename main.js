@@ -1,9 +1,7 @@
 const API_KEY = 'd9d23c4b33da4fb5bd3121603261702';
-let interval = 30000;
+const INTERVAL_TIMER = 30000;
 
 const getData = async (location) => {
-    console.log("now on getData!!!");
-    console.log(location)
     const url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${location.coords.latitude},${location.coords.longitude}`;
     try {
         const response = await fetch(url)
@@ -11,7 +9,6 @@ const getData = async (location) => {
             throw new Error(`Response status: ${response.status}`)
         }
         const result = await response.json();
-        console.log(result);
         showData(result);
     }
     catch (err) {
@@ -31,14 +28,16 @@ const getLocation = () => {
 }
 
 getLocation()
-setInterval(getLocation, interval)
+setInterval(getLocation, INTERVAL_TIMER)
 
 const showData = (data) => {
+    const degrees = Math.round(data.current.temp_c) 
+    const feelslike = Math.round(data.current.feelslike_c)
     document.getElementById("condImg").src = data.current.condition.icon;
-    document.getElementById("degrees").textContent = data.current.temp_c + ' C';
+    document.getElementById("degrees").textContent = degrees ;
     document.getElementById("condition").textContent = data.current.condition.text;
     document.getElementById("area").textContent = data.location.region + ', ' + data.location.country;
-    document.getElementById("feels-like").textContent = data.current.feelslike_c + ' C'
+    document.getElementById("feels-like").textContent = feelslike;
     document.getElementById("humidity").textContent = data.current.humidity + ' %'
 }
 
